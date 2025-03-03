@@ -32,6 +32,8 @@ export function MovieSearchForm({ onSearch }) {
           name="year"
           type="number"
           placeholder="Ex: 2012"
+          max={new Date().getFullYear()}
+          min={0}
           value={year}
           onChange={(e) => setYear(e.target.value)}
           className="w-full px-3 py-2 rounded-md border border-purple-400 bg-white text-black"

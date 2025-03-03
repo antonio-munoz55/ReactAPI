@@ -13,7 +13,7 @@ export function MoviesGrid({ movies }) {
               src={
                 movie.Poster !== 'N/A'
                   ? movie.Poster
-                  : 'https://via.placeholder.com/300x450?text=No+Image'
+                  : 'https://dummyimage.com/300x450/cccccc/ffffff.png&text=No+Image'
               }
               alt={movie.Title}
               className="absolute top-0 left-0 w-full h-full object-contain"
