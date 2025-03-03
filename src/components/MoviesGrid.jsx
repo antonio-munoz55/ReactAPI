@@ -8,16 +8,19 @@ export function MoviesGrid({ movies }) {
           key={movie.imdbID}
           className="bg-white text-black rounded-md shadow-md overflow-hidden"
         >
-          <img
-            src={
-              movie.Poster !== 'N/A'
-                ? movie.Poster
-                : 'https://via.placeholder.com/300x450?text=No+Image'
-            }
-            alt={movie.Title}
-            className="w-full h-64 object-cover" 
-          />
-          <div className="p-4">
+          <div className="relative w-full bg-black text-white" style={{ paddingTop: '147%' }}>
+            <img
+              src={
+                movie.Poster !== 'N/A'
+                  ? movie.Poster
+                  : 'https://via.placeholder.com/300x450?text=No+Image'
+              }
+              alt={movie.Title}
+              className="absolute top-0 left-0 w-full h-full object-contain"
+            />
+          </div>
+
+          <div className="p-4 text-center">
             <h3 className="font-semibold text-lg mb-1">{movie.Title}</h3>
             <p className="text-sm mb-1">{movie.Year}</p>
             <p className="text-xs text-gray-600">{movie.Type}</p>
